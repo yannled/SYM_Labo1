@@ -29,7 +29,7 @@ public class newActivity extends Activity {
     @Override
     public void onBackPressed() {
         Intent data = new Intent();
-        data.putExtra("myResult", "Already Login");
+        data.putExtra("myResult", getResources().getString(R.string.back));
         // Activity finished ok, return the data
         setResult(newActivity.RESULT_OK, data);
         finish();
