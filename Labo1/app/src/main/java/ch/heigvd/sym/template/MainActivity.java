@@ -141,7 +141,7 @@ public class MainActivity extends AppCompatActivity {
             if (!returnValue.isEmpty()) {
                 Toast.makeText(
                         this,
-                        "Your result is :  " + getResources().getString(R.string.back),
+                        "Your result is :  " + returnValue,
                         Toast.LENGTH_SHORT).show();
 
             }
