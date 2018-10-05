@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <string name="emailForm">toto@tutu.com</string>
+    <string name="passForm">tata</string>
     <string name="app_name">SYM Template Activity</string>
     <string name="email">E-mail</string>
     <string name="psw">Password</string>

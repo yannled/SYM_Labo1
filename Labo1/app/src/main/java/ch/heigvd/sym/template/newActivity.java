@@ -57,19 +57,23 @@ public class newActivity extends Activity {
         emailView.setText(email);
         passwordView.setText(password);
 
-
+        // Test needed permission with the Dexter library
         Dexter.withActivity(newActivity.this)
                 .withPermissions(Manifest.permission.READ_PHONE_STATE, Manifest.permission.READ_EXTERNAL_STORAGE)
                 .withListener(new MultiplePermissionsListener() {
+
+                    // if permission are accepted
                     @Override
                     public void onPermissionsChecked(MultiplePermissionsReport report) {
+
                         List<PermissionGrantedResponse> acceptPerms = report.getGrantedPermissionResponses();
                         for (PermissionGrantedResponse perm : acceptPerms) {
                             if (perm.getPermissionName().equals(Manifest.permission.READ_PHONE_STATE)) {
-                                // recupérer le IEMI
+                                // Access to Phone state so get the IEMI
                                 TelephonyManager telephonyManager = (TelephonyManager) getSystemService(TELEPHONY_SERVICE);
                                 iemiView.setText(telephonyManager.getDeviceId());
                             }
+                                // Access to External Storage to get the image
                             if (perm.getPermissionName().equals(Manifest.permission.READ_EXTERNAL_STORAGE)) {
                                 Bitmap bmp = BitmapFactory.decodeFile(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).toString() + File.separator + "miguel.png");
                                 iv.setImageBitmap(bmp);
@@ -77,6 +81,7 @@ public class newActivity extends Activity {
                         }
                     }
 
+                    // ASK for permissions
                     @Override
                     public void onPermissionRationaleShouldBeShown(List<PermissionRequest> permissions, PermissionToken token) {
                         token.continuePermissionRequest();

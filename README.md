@@ -52,18 +52,18 @@ onPause(), onStop(), etc... qui marquent le cycle de vie d'une application Andro
 
 1. On Create
 2. On Start
-3. On Resume (juste après, Why ????)
+3. On Resume (juste après)
 4. On Pause lorsque je change d'activité
 5. On Stop a la fin du changement d'activité
 6. On Start lorsque je reviens sur l'activité Main
 7. On Resume juste après le start.
 
-L'utilité de ces méthode à surcharger est de démarrer des composant/ outils comme par exemple le bluetooth au démarrage d'une actvité et la fermer lors de ça pause ou son arrêt.
+L'utilité de ces méthode à surcharger est de démarrer des composants / outils comme par exemple le bluetooth au démarrage d'une actvité et la fermer lors du passage en pause ou de l'arrêt de l'application.
 
 ### Question 9
 Facultatif – Question Bonus - S’il vous reste du temps, nous vous conseillons de le consacrer à
 mettre en place la résolution des permissions au runtime.
 
-- J'ai utilisé la librairie Dexter, qui apparement fonctionne chez d'autre (implémentation semblable) apparement j'ai un soucis sur mon simulateur à cause de la différence de version Android par rapport au celle utilisée pour programmer l'application.
-Cela fait que malgré que l'application n'a pas l'autorisation d'accès à l'external storage et à l'état du téléphone et ne fais pas la demande.
+- J'ai utilisé la librairie Dexter, qui apparement fonctionne chez d'autre (implémentation semblable) apparement j'ai un soucis sur mon simulateur à cause de la différence de version Android par rapport a celle utilisée pour programmer l'application.
+Malgré cela l'application n'a pas l'autorisation d'accès à "l'external storage" et à l'état du téléphone.  Il faudrait que nous ayont la popup de demnade d'authorisation, mais elle ne s'affiche pas. Nous supposont que c'est causé par les différences de version d'android.
 

@@ -5,22 +5,12 @@
     android:orientation="vertical" >
 
     <EditText
-        android:id="@+id/pseudo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="165dp"
-        android:ems="10"
-        android:hint="pseudo"
-        android:inputType="textPersonName" />
-
-    <EditText
         android:id="@+id/email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_marginTop="45dp"
-        android:hint="@string/labelEmail"
+        android:hint="@string/emailForm"
         android:inputType="textEmailAddress">
 
         <requestFocus />
@@ -33,7 +23,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="105dp"
         android:ems="10"
-        android:hint="@string/labelPassword"
+        android:hint="@string/passForm"
         android:inputType="textPassword" />
 
     <Button

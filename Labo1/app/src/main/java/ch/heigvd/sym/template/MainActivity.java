@@ -136,6 +136,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+        // get result from the previous activity
         if (resultCode == Activity.RESULT_OK) {
             String returnValue = data.getStringExtra("myResult");
             if (!returnValue.isEmpty()) {
